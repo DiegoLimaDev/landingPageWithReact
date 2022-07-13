@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { theme } from './theme/theme';
 
 import logo from './assets/images/logo_crd_data.png';
+import AboutUs from './pages/AboutUs';
 
 const Container = styled.div`
   padding: 1;
@@ -72,6 +73,7 @@ const Home = () => {
           <option value="EN">EN</option>
         </Dropdown>
       </NavBar>
+      <AboutUs language={language} />
     </Container>
   );
 };
