@@ -4,19 +4,22 @@ import { theme } from './theme/theme';
 
 import logo from './assets/images/logo_crd_data.png';
 import AboutUs from './pages/AboutUs';
+import Partners from './pages/Partners';
+import Services from './pages/Services';
 
 const Container = styled.div`
-  padding: 1;
+  width: 100%;
+  height: 100%;
 `;
 
 const NavBar = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
   height: 15%;
   background-color: ${theme.colors.primaryColor};
   align-items: center;
   padding: 2rem;
+  margin: 0 auto;
 `;
 
 const Links = styled.p`
@@ -54,8 +57,7 @@ const Dropdown = styled.select`
   color: ${theme.colors.thirdColor};
   font-size: ${theme.sizes.size4};
   border: none;
-  align-self: auto;
-  margin: 0 auto;
+  margin-left: auto;
 `;
 
 const Home = () => {
@@ -74,6 +76,8 @@ const Home = () => {
         </Dropdown>
       </NavBar>
       <AboutUs language={language} />
+      <Partners language={language} />
+      <Services language={language} />
     </Container>
   );
 };
