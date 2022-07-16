@@ -3,6 +3,7 @@ export const theme = {
     primaryColor: '#313235',
     secondaryColor: '#00A3FF',
     thirdColor: '#FFFEFD',
+    fourthColor: '#1B1C1E',
   },
   sizes: {
     size1: '4.8rem',
