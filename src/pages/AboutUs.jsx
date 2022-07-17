@@ -13,7 +13,7 @@ const images = [{ url: `${img1}` }, { url: `${img2}` }, { url: `${img3}` }];
 
 const data = {
   AboutUsText: {
-    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de aplicativos com Gestão Ágil em Projetos de TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
+    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de softwares com Gestão Ágil em Projetos de TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
     en: 'We are a group of companies working in synergy, alocating system developers. Using Agile Methods in our TIC Projects for the best performance in the development of apps and data science.',
   },
 };
@@ -21,20 +21,21 @@ const data = {
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
   width: 100%;
+  font-family: ${theme.font.secondary};
 `;
 
-const Title = styled.p`
-  color: ${theme.colors.thirdColor};
-  font-size: ${theme.sizes.size1};
-  font-weight: bold;
-`;
+// const Title = styled.p`
+//   color: ${theme.colors.thirdColor};
+//   font-size: ${theme.sizes.size1};
+//   font-weight: bold;
+// `;
 
-const DinamicTitle = styled.p`
-  color: ${theme.colors.secondaryColor};
-  font-size: ${theme.sizes.size2};
-  font-weight: bold;
-  margin-top: -5rem;
-`;
+// const DinamicTitle = styled.p`
+//   color: ${theme.colors.secondaryColor};
+//   font-size: ${theme.sizes.size2};
+//   font-weight: bold;
+//   margin-top: -5rem;
+// `;
 
 const Text = styled.p`
   color: ${theme.colors.thirdColor};
@@ -57,21 +58,21 @@ const AboutUs = ({ language }) => {
         }}
       >
         <img src={logo} />
-        <div style={{ flexDirection: 'column' }}>
+        {/* <div style={{ flexDirection: 'column' }}>
           <Title>
             {language === 'PT' ? 'TRABALHAMOS COM' : 'WORKING WITH'}
           </Title>
           <DinamicTitle>
             {language === 'PT' ? 'DESENVOLVIMENTO MOBILE_' : 'APP DEVELOPMENT_'}
           </DinamicTitle>
-        </div>
+        </div> */}
       </div>
       <div
         style={{
           display: 'flex',
           flexDirection: 'row',
           justifyContent: 'space-evenly',
-          margin: '200px auto',
+          margin: '150px auto',
           alignItems: 'flex-start',
         }}
       >

@@ -7,6 +7,7 @@ import logo from './assets/images/logo_crd_data.png';
 import AboutUs from './pages/AboutUs';
 import Partners from './pages/Partners';
 import Services from './pages/Services';
+import TalkToUs from './pages/TalkToUs';
 
 const Container = styled.div`
   width: 100%;
@@ -24,10 +25,6 @@ const NavBar = styled.div`
   position: sticky;
   top: 0;
   z-index: 1;
-
-  @media (max-width: 1000px) {
-    flex-direction: column;
-  }
 `;
 
 const Links = styled.p`
@@ -35,7 +32,7 @@ const Links = styled.p`
   font-size: ${theme.sizes.size4};
   font-weight: 600;
   margin: 3rem auto;
-
+  font-family: ${theme.font.primary};
   &:hover {
     transform: scale(1.2);
     cursor: pointer;
@@ -99,11 +96,21 @@ const Home = () => {
           </ScrollTarget>
         </Links>
         <Links>
-          <ScrollTarget to="services" spy={true} smooth={true} duration={500}>
+          <ScrollTarget
+            to="services"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-100}
+          >
             {language === 'PT' ? 'Serviços' : 'Services'}
           </ScrollTarget>
         </Links>
-        <Links>{language === 'PT' ? 'Fale conosco' : 'Contact us'}</Links>
+        <Links>
+          <ScrollTarget to="talkToUs" spy={true} smooth={true} duration={500}>
+            {language === 'PT' ? 'Fale conosco' : 'Contact us'}
+          </ScrollTarget>
+        </Links>
         <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>
           <option value="PT">PT</option>
           <option value="EN">EN</option>
@@ -112,6 +119,7 @@ const Home = () => {
       <AboutUs language={language} />
       <Partners language={language} />
       <Services language={language} />
+      <TalkToUs language={language} />
     </Container>
   );
 };

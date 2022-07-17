@@ -10,5 +10,10 @@ export const theme = {
     size2: '4rem',
     size3: '1.8rem',
     size4: '1.4rem',
+    size5: '1rem',
+  },
+  font: {
+    primary: '"Inter", sans-serif',
+    secondary: '"Poppins", sans-serif',
   },
 };

@@ -8,7 +8,8 @@ import g1ant from '../assets/images/logo_g1ant.png';
 
 const Container = styled.div`
   background-color: ${theme.colors.thirdColor};
-  margin-top: -100px;
+  margin-top: -50px;
+  font-family: ${theme.font.secondary};
 `;
 
 const Text = styled.p`
