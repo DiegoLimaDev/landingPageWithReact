@@ -65,7 +65,7 @@ const Dropdown = styled.select`
   font-size: ${theme.sizes.size4};
   border: none;
   margin-left: auto;
-  margin-right: 5%;
+  margin-right: 2%;
 `;
 
 const Home = () => {

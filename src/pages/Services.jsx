@@ -29,7 +29,7 @@ const Columns = styled.div`
 const InsideText = styled.p`
   ${({ title }) => css`
     color: ${theme.colors.thirdColor};
-    font-size: ${title === true ? theme.sizes.size3 : theme.sizes.size4};
+    font-size: ${title === 'true' ? theme.sizes.size3 : theme.sizes.size4};
   `}
 `;
 
@@ -46,21 +46,21 @@ const Services = ({ language }) => {
         }}
       >
         <Columns style={{ margin: '0 30px' }}>
-          <InsideText title={true}>
+          <InsideText title="true">
             {language === 'PT' ? 'ANÁLISE DE DADOS' : 'DATA ANALYSIS'}
           </InsideText>
           <InsideText>kk</InsideText>
           <img src={data} />
         </Columns>
         <Columns>
-          <InsideText title={true}>
+          <InsideText title="true">
             {language === 'PT' ? 'DESENVOLVIMENTO WEB' : 'WEB DEVELOPMENT'}
           </InsideText>
           <InsideText>kk</InsideText>
           <img src={web} />
         </Columns>
         <Columns>
-          <InsideText title={true}>
+          <InsideText title="true">
             {language === 'PT'
               ? 'DESENVOLVIMENTO MOBILE'
               : 'MOBILE DEVELOPMENT'}
