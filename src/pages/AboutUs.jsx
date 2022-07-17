@@ -14,6 +14,7 @@ const data = {
 
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
+  width: 100%;
 `;
 
 const Title = styled.p`
@@ -39,7 +40,7 @@ const Text = styled.p`
 
 const AboutUs = ({ language }) => {
   return (
-    <Container>
+    <Container id="aboutUs">
       <div
         style={{
           display: 'flex',

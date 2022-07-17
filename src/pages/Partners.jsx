@@ -19,7 +19,7 @@ const Text = styled.p`
 
 const Partners = ({ language }) => {
   return (
-    <Container>
+    <Container id="partners">
       <div style={{ alignItems: 'center' }}>
         <Text>{language === 'PT' ? 'Parceiros' : 'Partners'}</Text>
         <div style={{ display: 'block', margin: '0 auto', width: '6%' }}>

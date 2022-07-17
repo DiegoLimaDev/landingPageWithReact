@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { theme } from './theme/theme';
+import { Link as ScrollTarget } from 'react-scroll';
 
 import logo from './assets/images/logo_crd_data.png';
 import AboutUs from './pages/AboutUs';
@@ -15,18 +16,24 @@ const Container = styled.div`
 const NavBar = styled.div`
   display: flex;
   flex-direction: row;
-  height: 15%;
+  height: 10%;
+  width: 100%;
   background-color: ${theme.colors.primaryColor};
   align-items: center;
-  padding: 2rem;
   margin: 0 auto;
+  position: sticky;
+  top: 0;
+
+  @media (max-width: 1000px) {
+    flex-direction: column;
+  }
 `;
 
 const Links = styled.p`
   color: ${theme.colors.thirdColor};
   font-size: ${theme.sizes.size4};
   font-weight: 600;
-  margin: 0 5rem;
+  margin: 3rem auto;
 
   &:hover {
     transform: scale(1.2);
@@ -58,17 +65,43 @@ const Dropdown = styled.select`
   font-size: ${theme.sizes.size4};
   border: none;
   margin-left: auto;
+  margin-right: 5%;
 `;
 
 const Home = () => {
   const [language, setLanguage] = useState('PT');
+
   return (
     <Container>
       <NavBar>
-        <img src={logo} style={{ marginRight: '8rem' }} />
-        <Links>{language === 'PT' ? 'Sobre' : 'About us'}</Links>
-        <Links>{language === 'PT' ? 'Parceiros' : 'Partners'}</Links>
-        <Links>{language === 'PT' ? 'Serviços' : 'Services'}</Links>
+        <img src={logo} style={{ marginLeft: '2rem' }} />
+        <Links>
+          <ScrollTarget
+            to="aboutUs"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-150}
+          >
+            {language === 'PT' ? 'Sobre' : 'About us'}
+          </ScrollTarget>
+        </Links>
+        <Links>
+          <ScrollTarget
+            to="partners"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-100}
+          >
+            {language === 'PT' ? 'Parceiros' : 'Partners'}
+          </ScrollTarget>
+        </Links>
+        <Links>
+          <ScrollTarget to="services" spy={true} smooth={true} duration={500}>
+            {language === 'PT' ? 'Serviços' : 'Services'}
+          </ScrollTarget>
+        </Links>
         <Links>{language === 'PT' ? 'Fale conosco' : 'Contact us'}</Links>
         <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>
           <option value="PT">PT</option>
