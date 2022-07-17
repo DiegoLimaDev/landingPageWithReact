@@ -2,8 +2,20 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../theme/theme';
 import P from 'prop-types';
+import SimpleImageSlider from 'react-simple-image-slider';
 
+import img1 from '../assets/images/img_1.png';
+import img2 from '../assets/images/img_2.png';
+import img3 from '../assets/images/img_3.png';
+import img4 from '../assets/images/img_4.png';
 import logo from '../assets/images/only_logo.png';
+
+const images = [
+  { url: `${img1}` },
+  { url: `${img2}` },
+  { url: `${img3}` },
+  { url: `${img4}` },
+];
 
 const data = {
   AboutUsText: {
@@ -59,10 +71,33 @@ const AboutUs = ({ language }) => {
           </DinamicTitle>
         </div>
       </div>
-      <div>
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'row',
+          justifyContent: 'space-evenly',
+          margin: '200px auto',
+          alignItems: 'flex-start',
+        }}
+      >
         <Text>
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
+        <SimpleImageSlider
+          width={700}
+          height={500}
+          images={images}
+          showBullets={true}
+          showNavs={true}
+          slideDuration={0.7}
+          loop={true}
+          navStyle={2}
+          navSize={30}
+          navMargin={10}
+          autoPlay={true}
+          autoPlayDelay={5}
+          style={{ marginBottom: '200px' }}
+        />
       </div>
     </Container>
   );

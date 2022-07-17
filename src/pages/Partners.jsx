@@ -8,7 +8,7 @@ import g1ant from '../assets/images/logo_g1ant.png';
 
 const Container = styled.div`
   background-color: ${theme.colors.thirdColor};
-  padding: 1rem;
+  margin-top: -100px;
 `;
 
 const Text = styled.p`
@@ -24,7 +24,7 @@ const Partners = ({ language }) => {
         <Text>{language === 'PT' ? 'Parceiros' : 'Partners'}</Text>
         <div style={{ display: 'block', margin: '0 auto', width: '6%' }}>
           <img src={foz} style={{ margin: '50px 0' }} />
-          <img src={g1ant} style={{ margin: '50px 0' }} />
+          <img src={g1ant} style={{ margin: '50px 0 100px 0' }} />
         </div>
       </div>
     </Container>

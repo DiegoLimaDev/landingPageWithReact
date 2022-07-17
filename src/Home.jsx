@@ -23,6 +23,7 @@ const NavBar = styled.div`
   margin: 0 auto;
   position: sticky;
   top: 0;
+  z-index: 1;
 
   @media (max-width: 1000px) {
     flex-direction: column;
@@ -92,7 +93,7 @@ const Home = () => {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-100}
+            offset={-150}
           >
             {language === 'PT' ? 'Parceiros' : 'Partners'}
           </ScrollTarget>
