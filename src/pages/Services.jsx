@@ -43,6 +43,7 @@ const Services = ({ language }) => {
           flexDirection: 'row',
           display: 'flex',
           justifyContent: 'space-evenly',
+          margin: '100px auto',
         }}
       >
         <Columns style={{ margin: '0 30px' }}>

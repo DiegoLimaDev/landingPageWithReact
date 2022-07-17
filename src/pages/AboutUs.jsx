@@ -7,15 +7,9 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import img1 from '../assets/images/img_1.png';
 import img2 from '../assets/images/img_2.png';
 import img3 from '../assets/images/img_3.png';
-import img4 from '../assets/images/img_4.png';
 import logo from '../assets/images/only_logo.png';
 
-const images = [
-  { url: `${img1}` },
-  { url: `${img2}` },
-  { url: `${img3}` },
-  { url: `${img4}` },
-];
+const images = [{ url: `${img1}` }, { url: `${img2}` }, { url: `${img3}` }];
 
 const data = {
   AboutUsText: {
@@ -59,6 +53,7 @@ const AboutUs = ({ language }) => {
           flexDirection: 'row',
           alignItems: 'center',
           justifyContent: 'center',
+          paddingTop: '100px',
         }}
       >
         <img src={logo} />

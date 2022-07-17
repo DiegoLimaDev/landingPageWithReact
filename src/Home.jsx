@@ -82,7 +82,7 @@ const Home = () => {
             spy={true}
             smooth={true}
             duration={500}
-            offset={-150}
+            offset={-50}
           >
             {language === 'PT' ? 'Sobre' : 'About us'}
           </ScrollTarget>
