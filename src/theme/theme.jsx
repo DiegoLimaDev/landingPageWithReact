@@ -16,4 +16,8 @@ export const theme = {
     primary: '"Inter", sans-serif',
     secondary: '"Poppins", sans-serif',
   },
+  medias: {
+    media1: '(max-width: 800px)',
+    media2: '(max-width: 1200px)',
+  },
 };

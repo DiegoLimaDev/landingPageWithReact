@@ -43,6 +43,23 @@ const Text = styled.p`
   width: 30%;
   text-align: justify;
   padding: 2rem;
+
+  @media ${theme.medias.media2} {
+    width: 80%;
+  }
+`;
+
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 150px auto;
+  align-items: flex-start;
+
+  @media ${theme.medias.media2} {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const AboutUs = ({ language }) => {
@@ -67,15 +84,7 @@ const AboutUs = ({ language }) => {
           </DinamicTitle>
         </div> */}
       </div>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-          margin: '150px auto',
-          alignItems: 'flex-start',
-        }}
-      >
+      <Row>
         <Text>
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
@@ -94,7 +103,7 @@ const AboutUs = ({ language }) => {
           autoPlayDelay={5}
           style={{ marginBottom: '200px' }}
         />
-      </div>
+      </Row>
     </Container>
   );
 };

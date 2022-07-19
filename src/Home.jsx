@@ -25,6 +25,12 @@ const NavBar = styled.div`
   position: sticky;
   top: 0;
   z-index: 1;
+
+  @media ${theme.medias.media1} {
+    visibility: hidden;
+    position: relative;
+    height: 0;
+  }
 `;
 
 const Links = styled.p`
@@ -66,11 +72,31 @@ const Dropdown = styled.select`
   margin-right: 2%;
 `;
 
+const SwitchLanguage = styled.div`
+  visibility: hidden;
+
+  @media ${theme.medias.media1} {
+    visibility: visible;
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 50%;
+    left: 50%;
+  }
+`;
+
 const Home = () => {
   const [language, setLanguage] = useState('PT');
 
   return (
     <Container>
+      <SwitchLanguage>
+        <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>
+          <option value="PT">PT</option>
+          <option value="EN">EN</option>
+        </Dropdown>
+      </SwitchLanguage>
+
       <NavBar>
         <img src={logo} style={{ marginLeft: '2rem' }} />
         <Links>
@@ -108,7 +134,7 @@ const Home = () => {
         </Links>
         <Links>
           <ScrollTarget to="talkToUs" spy={true} smooth={true} duration={500}>
-            {language === 'PT' ? 'Fale conosco' : 'Contact us'}
+            {language === 'PT' ? 'Fale conosco' : 'Contact'}
           </ScrollTarget>
         </Links>
         <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>

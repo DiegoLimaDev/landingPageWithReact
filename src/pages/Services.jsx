@@ -25,6 +25,12 @@ const Columns = styled.div`
   padding: 50px;
   width: 20%;
   text-align: center;
+
+  @media ${theme.medias.media2} {
+    align-self: center;
+    width: 50%;
+    margin: 100px auto;
+  }
 `;
 
 const InsideText = styled.p`
@@ -35,19 +41,23 @@ const InsideText = styled.p`
   `}
 `;
 
+const Row = styled.div`
+  direction: ltr;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 100px auto;
+
+  @media ${theme.medias.media2} {
+    flex-direction: column;
+  }
+`;
+
 const Services = ({ language }) => {
   return (
     <Container id="services">
       <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text>
-      <div
-        style={{
-          direction: 'ltr',
-          flexDirection: 'row',
-          display: 'flex',
-          justifyContent: 'space-evenly',
-          margin: '100px auto',
-        }}
-      >
+      <Row>
         <Columns>
           <InsideText title="true">
             {language === 'PT' ? 'ANÁLISE DE DADOS' : 'DATA ANALYSIS'}
@@ -83,7 +93,7 @@ const Services = ({ language }) => {
           </InsideText>
           <img src={app} />
         </Columns>
-      </div>
+      </Row>
     </Container>
   );
 };

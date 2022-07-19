@@ -18,15 +18,42 @@ const Text = styled.p`
   text-align: center;
 `;
 
+const Row = styled.div`
+  display: flex;
+  margin: 0 auto;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+
+  @media ${theme.medias.media1} {
+    flex-direction: column;
+    justify-content: center;
+  }
+`;
+
 const Partners = ({ language }) => {
   return (
     <Container id="partners">
-      <div style={{ alignItems: 'center' }}>
+      <div
+        style={{
+          alignItems: 'center',
+        }}
+      >
         <Text>{language === 'PT' ? 'Parceiros' : 'Partners'}</Text>
-        <div style={{ display: 'block', margin: '0 auto', width: '6%' }}>
-          <img src={foz} style={{ margin: '50px 0' }} />
-          <img src={g1ant} style={{ margin: '50px 0 100px 0' }} />
-        </div>
+        <Row>
+          <img
+            src={foz}
+            style={{ margin: '50px 0', width: '150px', height: '150px' }}
+          />
+          <img
+            src={g1ant}
+            style={{
+              margin: '50px 0 100px 0',
+              width: '500px',
+              height: '150px',
+            }}
+          />
+        </Row>
       </div>
     </Container>
   );
