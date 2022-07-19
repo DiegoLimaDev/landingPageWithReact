@@ -60,6 +60,24 @@ const Row = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media ${theme.medias.media1} {
+    visibility: hidden;
+    height: 0;
+  }
+`;
+
+const SliderToPhones = styled.div`
+  visibility: hidden;
+  height: 0;
+
+  @media ${theme.medias.media1} {
+    visibility: visible;
+    height: auto;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin-top: -50%;
+  }
 `;
 
 const AboutUs = ({ language }) => {
@@ -89,7 +107,7 @@ const AboutUs = ({ language }) => {
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
         <SimpleImageSlider
-          width={700}
+          width={'50%'}
           height={500}
           images={images}
           showBullets={true}
@@ -101,9 +119,29 @@ const AboutUs = ({ language }) => {
           navMargin={10}
           autoPlay={true}
           autoPlayDelay={5}
-          style={{ marginBottom: '200px' }}
+          style={{ marginBottom: '100px' }}
         />
       </Row>
+      <SliderToPhones>
+        <Text>
+          {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
+        </Text>
+        <SimpleImageSlider
+          width={300}
+          height={250}
+          images={images}
+          showBullets={true}
+          showNavs={true}
+          slideDuration={0.7}
+          loop={true}
+          navStyle={2}
+          navSize={30}
+          navMargin={10}
+          autoPlay={true}
+          autoPlayDelay={5}
+          style={{ display: 'block', margin: '0 auto 50px auto' }}
+        />
+      </SliderToPhones>
     </Container>
   );
 };
