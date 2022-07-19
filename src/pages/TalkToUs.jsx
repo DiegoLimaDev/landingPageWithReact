@@ -41,7 +41,7 @@ const Text = styled.p`
 const TalkToUs = ({ language }) => {
   return (
     <Container id="talkToUs">
-      <Title>{language === 'PT' ? 'Fale conosco' : 'Talk to us'}</Title>
+      <Title>{language === 'PT' ? 'Fale conosco' : 'Contact'}</Title>
       <div
         style={{
           display: 'flex',
