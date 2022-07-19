@@ -27,6 +27,26 @@ const Container = styled.div`
   margin-bottom: 50px;
 `;
 
+const Row = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  @media ${theme.medias.media1} {
+    flex-direction: column;
+  }
+`;
+
+const FooterDiv = styled.div`
+  text-align: justify;
+  width: 15%;
+
+  @media ${theme.medias.media1} {
+    width: auto;
+    margin-left: 5%;
+  }
+`;
+
 const Title = styled.p`
   color: ${theme.colors.primaryColor};
   font-size: ${theme.sizes.size3};
@@ -42,27 +62,23 @@ const TalkToUs = ({ language }) => {
   return (
     <Container id="talkToUs">
       <Title>{language === 'PT' ? 'Fale conosco' : 'Contact'}</Title>
-      <div
-        style={{
-          display: 'flex',
-          flexDirection: 'row',
-          justifyContent: 'space-evenly',
-        }}
-      >
-        <div style={{ textAlign: 'justify', width: '15%' }}>
+      <Row>
+        <FooterDiv>
+          <Title>Reef Coworking</Title>
           <Text>{data.places.reef.address}</Text>
           <Text>{data.places.reef.building}</Text>
           <Text>{data.places.reef.room}</Text>
           <Text>{data.places.reef.city}</Text>
           <Text>{data.places.reef.CEP}</Text>
-        </div>
-        <div style={{ textAlign: 'justify', width: '15%' }}>
+        </FooterDiv>
+        <FooterDiv>
+          <Title>FOZ Inovação</Title>
           <Text>{data.places.foz.address}</Text>
           <Text>{data.places.foz.building}</Text>
           <Text>{data.places.foz.city}</Text>
           <Text>{data.places.foz.CEP}</Text>
-        </div>
-      </div>
+        </FooterDiv>
+      </Row>
       <Text style={{ textAlign: 'center' }}>financeiro@crddata.com.br</Text>
     </Container>
   );
