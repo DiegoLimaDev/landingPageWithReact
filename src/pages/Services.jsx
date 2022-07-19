@@ -28,7 +28,7 @@ const Columns = styled.div`
 
   @media ${theme.medias.media2} {
     align-self: center;
-    width: 50%;
+    width: auto;
     margin: 100px auto;
   }
 `;
