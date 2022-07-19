@@ -31,6 +31,28 @@ const Row = styled.div`
   }
 `;
 
+const Img1 = styled.img`
+  margin: 50px 0;
+  width: 500px;
+  height: 350px;
+
+  @media ${theme.medias.media1} {
+    width: 200px;
+    height: 150px;
+  }
+`;
+
+const Img2 = styled.img`
+  margin: 50px 0;
+  width: 500px;
+  height: 150px;
+
+  @media ${theme.medias.media1} {
+    width: 200px;
+    height: 50px;
+  }
+`;
+
 const Partners = ({ language }) => {
   return (
     <Container id="partners">
@@ -41,17 +63,17 @@ const Partners = ({ language }) => {
       >
         <Text>{language === 'PT' ? 'Parceiros' : 'Partners'}</Text>
         <Row>
-          <img
+          <Img1
             src={foz}
-            style={{ margin: '50px 0', width: '150px', height: '150px' }}
+            // style={{ margin: '50px 0', width: '500px', height: '350px' }}
           />
-          <img
+          <Img2
             src={g1ant}
-            style={{
-              margin: '50px 0 100px 0',
-              width: '500px',
-              height: '150px',
-            }}
+            // style={{
+            //   margin: '50px 0 100px 0',
+            //   width: '500px',
+            //   height: '150px',
+            // }}
           />
         </Row>
       </div>
