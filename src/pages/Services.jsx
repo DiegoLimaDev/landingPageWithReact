@@ -56,7 +56,7 @@ const Row = styled.div`
 const Services = ({ language }) => {
   return (
     <Container id="services">
-      <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text>
+      {/* <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text> */}
       <Row>
         <Columns>
           <InsideText title="true">
