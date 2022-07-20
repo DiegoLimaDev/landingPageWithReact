@@ -13,11 +13,11 @@ const Container = styled.div`
   font-family: ${theme.font.secondary};
 `;
 
-const Text = styled.p`
-  color: ${theme.colors.thirdColor};
-  font-size: ${theme.sizes.size2};
-  text-align: center;
-`;
+// const Text = styled.p`
+//   color: ${theme.colors.thirdColor};
+//   font-size: ${theme.sizes.size2};
+//   text-align: center;
+// `;
 
 const Columns = styled.div`
   background-color: ${theme.colors.fourthColor};
@@ -28,7 +28,7 @@ const Columns = styled.div`
 
   @media ${theme.medias.media2} {
     align-self: center;
-    width: 50%;
+    width: auto;
     margin: 100px auto;
   }
 `;
@@ -56,7 +56,7 @@ const Row = styled.div`
 const Services = ({ language }) => {
   return (
     <Container id="services">
-      <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text>
+      {/* <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text> */}
       <Row>
         <Columns>
           <InsideText title="true">

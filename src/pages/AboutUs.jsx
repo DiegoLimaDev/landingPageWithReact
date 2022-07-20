@@ -7,13 +7,14 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import img1 from '../assets/images/img_1.png';
 import img2 from '../assets/images/img_2.png';
 import img3 from '../assets/images/img_3.png';
-import logo from '../assets/images/only_logo.png';
+// import logo from '../assets/images/only_logo.png';
+import TypewriterComponent from 'typewriter-effect';
 
 const images = [{ url: `${img1}` }, { url: `${img2}` }, { url: `${img3}` }];
 
 const data = {
   AboutUsText: {
-    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de softwares com Gestão Ágil em Projetos de TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
+    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de softwares com Gestão Ágil em Projetos TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
     en: 'We are a group of companies working in synergy, alocating system developers. Using Agile Methods in our TIC Projects for the best performance in the development of apps and data science.',
   },
 };
@@ -30,12 +31,15 @@ const Container = styled.div`
 //   font-weight: bold;
 // `;
 
-// const DinamicTitle = styled.p`
-//   color: ${theme.colors.secondaryColor};
-//   font-size: ${theme.sizes.size2};
-//   font-weight: bold;
-//   margin-top: -5rem;
-// `;
+const DinamicTitle = styled.p`
+  color: ${theme.colors.secondaryColor};
+  font-size: ${theme.sizes.size2};
+  font-weight: bold;
+
+  @media ${theme.medias.media1} {
+    font-size: ${theme.sizes.size3};
+  }
+`;
 
 const Text = styled.p`
   color: ${theme.colors.thirdColor};
@@ -60,6 +64,24 @@ const Row = styled.div`
     flex-direction: column;
     align-items: center;
   }
+
+  @media ${theme.medias.media1} {
+    visibility: hidden;
+    height: 0;
+  }
+`;
+
+const SliderToPhones = styled.div`
+  visibility: hidden;
+  height: 0;
+
+  @media ${theme.medias.media1} {
+    visibility: visible;
+    height: auto;
+    justify-content: space-evenly;
+    padding: 2rem;
+    margin-top: -50%;
+  }
 `;
 
 const AboutUs = ({ language }) => {
@@ -74,7 +96,7 @@ const AboutUs = ({ language }) => {
           paddingTop: '100px',
         }}
       >
-        <img src={logo} />
+        {/* <img src={logo} /> */}
         {/* <div style={{ flexDirection: 'column' }}>
           <Title>
             {language === 'PT' ? 'TRABALHAMOS COM' : 'WORKING WITH'}
@@ -83,13 +105,36 @@ const AboutUs = ({ language }) => {
             {language === 'PT' ? 'DESENVOLVIMENTO MOBILE_' : 'APP DEVELOPMENT_'}
           </DinamicTitle>
         </div> */}
+        <DinamicTitle>
+          <TypewriterComponent
+            onInit={(typed) => {
+              typed
+                .typeString('Web development')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+              typed
+                .typeString('Mobile development')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+              typed.typeString('B.I.').pauseFor(3000).deleteAll().start();
+              typed
+                .typeString('DATA ANALYSIS')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+            }}
+            options={{ loop: true }}
+          />
+        </DinamicTitle>
       </div>
       <Row>
         <Text>
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
         <SimpleImageSlider
-          width={700}
+          width={'50%'}
           height={500}
           images={images}
           showBullets={true}
@@ -101,9 +146,29 @@ const AboutUs = ({ language }) => {
           navMargin={10}
           autoPlay={true}
           autoPlayDelay={5}
-          style={{ marginBottom: '200px' }}
+          style={{ marginBottom: '100px' }}
         />
       </Row>
+      <SliderToPhones>
+        <Text>
+          {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
+        </Text>
+        <SimpleImageSlider
+          width={300}
+          height={250}
+          images={images}
+          showBullets={true}
+          showNavs={true}
+          slideDuration={0.7}
+          loop={true}
+          navStyle={2}
+          navSize={30}
+          navMargin={10}
+          autoPlay={true}
+          autoPlayDelay={5}
+          style={{ display: 'block', margin: '0 auto 50px auto' }}
+        />
+      </SliderToPhones>
     </Container>
   );
 };

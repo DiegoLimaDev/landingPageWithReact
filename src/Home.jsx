@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Partners from './pages/Partners';
 import Services from './pages/Services';
 import TalkToUs from './pages/TalkToUs';
+import Footer from './pages/Footer';
 
 const Container = styled.div`
   width: 100%;
@@ -29,7 +30,9 @@ const NavBar = styled.div`
   @media ${theme.medias.media1} {
     visibility: hidden;
     position: relative;
+    flex-direction: column;
     height: 0;
+    width: 0;
   }
 `;
 
@@ -61,19 +64,26 @@ const Links = styled.p`
     position: absolute;
     transition: all 200ms ease-in-out;
   }
+
+  @media ${theme.medias.media1} {
+    width: 0;
+    height: 0;
+    visibility: collapse;
+  }
 `;
 
 const Dropdown = styled.select`
   background-color: ${theme.colors.primaryColor};
   color: ${theme.colors.thirdColor};
   font-size: ${theme.sizes.size4};
-  border: none;
+  border: 0;
   margin-left: auto;
   margin-right: 2%;
 `;
 
 const SwitchLanguage = styled.div`
   visibility: hidden;
+  height: 0;
 
   @media ${theme.medias.media1} {
     visibility: visible;
@@ -146,6 +156,7 @@ const Home = () => {
       <Partners language={language} />
       <Services language={language} />
       <TalkToUs language={language} />
+      <Footer />
     </Container>
   );
 };
