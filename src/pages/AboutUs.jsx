@@ -7,13 +7,14 @@ import SimpleImageSlider from 'react-simple-image-slider';
 import img1 from '../assets/images/img_1.png';
 import img2 from '../assets/images/img_2.png';
 import img3 from '../assets/images/img_3.png';
-import logo from '../assets/images/only_logo.png';
+// import logo from '../assets/images/only_logo.png';
+import TypewriterComponent from 'typewriter-effect';
 
 const images = [{ url: `${img1}` }, { url: `${img2}` }, { url: `${img3}` }];
 
 const data = {
   AboutUsText: {
-    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de softwares com Gestão Ágil em Projetos de TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
+    pt: 'Somos um grupo de empresas em sinergia no desenvolvimento de softwares com Gestão Ágil em Projetos TIC, alocação de pessoas desenvolvedoras de sistemas e governança de dados.',
     en: 'We are a group of companies working in synergy, alocating system developers. Using Agile Methods in our TIC Projects for the best performance in the development of apps and data science.',
   },
 };
@@ -30,12 +31,15 @@ const Container = styled.div`
 //   font-weight: bold;
 // `;
 
-// const DinamicTitle = styled.p`
-//   color: ${theme.colors.secondaryColor};
-//   font-size: ${theme.sizes.size2};
-//   font-weight: bold;
-//   margin-top: -5rem;
-// `;
+const DinamicTitle = styled.p`
+  color: ${theme.colors.secondaryColor};
+  font-size: ${theme.sizes.size2};
+  font-weight: bold;
+
+  @media ${theme.medias.media1} {
+    font-size: ${theme.sizes.size3};
+  }
+`;
 
 const Text = styled.p`
   color: ${theme.colors.thirdColor};
@@ -92,7 +96,7 @@ const AboutUs = ({ language }) => {
           paddingTop: '100px',
         }}
       >
-        <img src={logo} />
+        {/* <img src={logo} /> */}
         {/* <div style={{ flexDirection: 'column' }}>
           <Title>
             {language === 'PT' ? 'TRABALHAMOS COM' : 'WORKING WITH'}
@@ -101,6 +105,29 @@ const AboutUs = ({ language }) => {
             {language === 'PT' ? 'DESENVOLVIMENTO MOBILE_' : 'APP DEVELOPMENT_'}
           </DinamicTitle>
         </div> */}
+        <DinamicTitle>
+          <TypewriterComponent
+            onInit={(typed) => {
+              typed
+                .typeString('Web development')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+              typed
+                .typeString('Mobile development')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+              typed.typeString('B.I.').pauseFor(3000).deleteAll().start();
+              typed
+                .typeString('DATA ANALYSIS')
+                .pauseFor(3000)
+                .deleteAll()
+                .start();
+            }}
+            options={{ loop: true }}
+          />
+        </DinamicTitle>
       </div>
       <Row>
         <Text>

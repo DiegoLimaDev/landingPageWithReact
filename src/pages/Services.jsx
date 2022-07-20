@@ -13,11 +13,11 @@ const Container = styled.div`
   font-family: ${theme.font.secondary};
 `;
 
-const Text = styled.p`
-  color: ${theme.colors.thirdColor};
-  font-size: ${theme.sizes.size2};
-  text-align: center;
-`;
+// const Text = styled.p`
+//   color: ${theme.colors.thirdColor};
+//   font-size: ${theme.sizes.size2};
+//   text-align: center;
+// `;
 
 const Columns = styled.div`
   background-color: ${theme.colors.fourthColor};

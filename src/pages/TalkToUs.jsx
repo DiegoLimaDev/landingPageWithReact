@@ -93,7 +93,7 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title>FOZ Inovação</Title>
+            <Title>Foz Inovação</Title>
           </div>
           <Text>{data.places.foz.address}</Text>
           <Text>{data.places.foz.building}</Text>
