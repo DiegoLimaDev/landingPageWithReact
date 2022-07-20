@@ -3,6 +3,8 @@ import styled from 'styled-components';
 import { theme } from '../theme/theme';
 import P from 'prop-types';
 
+import { Location } from '@styled-icons/evil';
+
 const data = {
   places: {
     reef: {
@@ -61,10 +63,20 @@ const Text = styled.p`
 const TalkToUs = ({ language }) => {
   return (
     <Container id="talkToUs">
-      <Title>{language === 'PT' ? 'Fale conosco' : 'Contact'}</Title>
+      <Title>{language === 'PT' ? 'Onde estamos' : 'Contact'}</Title>
       <Row>
         <FooterDiv>
-          <Title>Reef Coworking</Title>
+          <div
+            style={{
+              display: 'flex',
+              direction: 'ltr',
+              alignItems: 'center',
+              textAlign: 'left',
+            }}
+          >
+            <Location size="40" color={theme.colors.primaryColor} />
+            <Title>Reef Coworking</Title>
+          </div>
           <Text>{data.places.reef.address}</Text>
           <Text>{data.places.reef.building}</Text>
           <Text>{data.places.reef.room}</Text>
@@ -72,14 +84,24 @@ const TalkToUs = ({ language }) => {
           <Text>{data.places.reef.CEP}</Text>
         </FooterDiv>
         <FooterDiv>
-          <Title>FOZ Inovação</Title>
+          <div
+            style={{
+              display: 'flex',
+              direction: 'ltr',
+              alignItems: 'center',
+              textAlign: 'left',
+            }}
+          >
+            <Location size="40" color={theme.colors.primaryColor} />
+            <Title>FOZ Inovação</Title>
+          </div>
           <Text>{data.places.foz.address}</Text>
           <Text>{data.places.foz.building}</Text>
           <Text>{data.places.foz.city}</Text>
           <Text>{data.places.foz.CEP}</Text>
         </FooterDiv>
       </Row>
-      <Text style={{ textAlign: 'center' }}>financeiro@crddata.com.br</Text>
+      <Text style={{ textAlign: 'center' }}>contato@crddata.com.br</Text>
     </Container>
   );
 };
