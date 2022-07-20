@@ -8,6 +8,7 @@ import AboutUs from './pages/AboutUs';
 import Partners from './pages/Partners';
 import Services from './pages/Services';
 import TalkToUs from './pages/TalkToUs';
+import Footer from './pages/Footer';
 
 const Container = styled.div`
   width: 100%;
@@ -75,7 +76,7 @@ const Dropdown = styled.select`
   background-color: ${theme.colors.primaryColor};
   color: ${theme.colors.thirdColor};
   font-size: ${theme.sizes.size4};
-  border: none;
+  border: 0;
   margin-left: auto;
   margin-right: 2%;
 `;
@@ -155,6 +156,7 @@ const Home = () => {
       <Partners language={language} />
       <Services language={language} />
       <TalkToUs language={language} />
+      <Footer />
     </Container>
   );
 };
