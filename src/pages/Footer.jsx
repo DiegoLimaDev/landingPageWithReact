@@ -33,7 +33,7 @@ const Footer = () => {
         }}
       >
         <Img src={logo} />
-        <Text>Copyright © 2022 CRD DATA LTDA.</Text>
+        <Text>Copyright © 2022 CRD DATA LTDA - CNPJ: 46.639.045/0001-01</Text>
         <a
           href="https://www.linkedin.com/company/crddata/"
           target="_blank"

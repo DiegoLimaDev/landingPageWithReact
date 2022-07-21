@@ -50,6 +50,7 @@ const Text = styled.p`
 
   @media ${theme.medias.media2} {
     width: 80%;
+    font-size: ${theme.sizes.size4};
   }
 `;
 
