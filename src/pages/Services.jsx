@@ -6,6 +6,9 @@ import P from 'prop-types';
 import web from '../assets/images/web_dev_img.png';
 import data from '../assets/images/data_analysis_img.png';
 import app from '../assets/images/app_dev_img.png';
+import ia from '../assets/images/i.a_img.png';
+import rpa from '../assets/images/rpa_img.png';
+import metaverso from '../assets/images/metaverso_img.png';
 
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
@@ -92,6 +95,41 @@ const Services = ({ language }) => {
               : 'Making everything easier with the simplicity of a touch anywhere.'}
           </InsideText>
           <img src={app} />
+        </Columns>
+      </Row>
+      <Row>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'I.A.' : 'A.I.'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'Utilizando de estatíscas e dashboards, torne suas tomadas de decisões mais precisas.'
+              : 'Using statics and dashboards, make your decisions even more accurate.'}
+          </InsideText>
+          <img src={ia} />
+        </Columns>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'RPA' : 'RPA'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'Programando com as tecnologias mais atuais e inovando os padrões de design.'
+              : 'Programming with the latest technologies and innovating the design patterns.'}
+          </InsideText>
+          <img src={rpa} />
+        </Columns>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'METAVERSO' : 'METAVERSE'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'Tornando tudo mais fácil com a facilidade de um toque em qualquer lugar.'
+              : 'Making everything easier with the simplicity of a touch anywhere.'}
+          </InsideText>
+          <img src={metaverso} />
         </Columns>
       </Row>
     </Container>
