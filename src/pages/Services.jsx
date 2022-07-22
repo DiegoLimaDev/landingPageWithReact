@@ -104,8 +104,8 @@ const Services = ({ language }) => {
           </InsideText>
           <InsideText>
             {language === 'PT'
-              ? 'Utilizando de estatíscas e dashboards, torne suas tomadas de decisões mais precisas.'
-              : 'Using statics and dashboards, make your decisions even more accurate.'}
+              ? 'Facilite sua rotina tendo decisões automatizadas baseadas em dados.'
+              : 'Make your life easier with automated decisions based on data.'}
           </InsideText>
           <img src={ia} />
         </Columns>
@@ -115,8 +115,8 @@ const Services = ({ language }) => {
           </InsideText>
           <InsideText>
             {language === 'PT'
-              ? 'Programando com as tecnologias mais atuais e inovando os padrões de design.'
-              : 'Programming with the latest technologies and innovating the design patterns.'}
+              ? 'Agilidade e eficiência com a automatização de processos.'
+              : 'Agility and efficiency with process automation.'}
           </InsideText>
           <img src={rpa} />
         </Columns>
@@ -126,8 +126,8 @@ const Services = ({ language }) => {
           </InsideText>
           <InsideText>
             {language === 'PT'
-              ? 'Tornando tudo mais fácil com a facilidade de um toque em qualquer lugar.'
-              : 'Making everything easier with the simplicity of a touch anywhere.'}
+              ? 'O próximo passo do mundo virtual, um novo ambiente contruido por todos. Seja parte.'
+              : 'The next step of the virtual world, a new enviroment built by everyone. Be part of it.'}
           </InsideText>
           <img src={metaverso} />
         </Columns>
