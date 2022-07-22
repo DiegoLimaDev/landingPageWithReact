@@ -50,6 +50,7 @@ const Text = styled.p`
 
   @media ${theme.medias.media2} {
     width: 80%;
+    font-size: ${theme.sizes.size4};
   }
 `;
 
@@ -108,24 +109,17 @@ const AboutUs = ({ language }) => {
         <DinamicTitle>
           <TypewriterComponent
             onInit={(typed) => {
+              typed.typeString('Innovation').pauseFor(3000).deleteAll().start();
+              typed.typeString('Agile').pauseFor(3000).deleteAll().start();
               typed
-                .typeString('Web development')
+                .typeString('Transparency')
                 .pauseFor(3000)
                 .deleteAll()
                 .start();
-              typed
-                .typeString('Mobile development')
-                .pauseFor(3000)
-                .deleteAll()
-                .start();
-              typed.typeString('B.I.').pauseFor(3000).deleteAll().start();
-              typed
-                .typeString('DATA ANALYSIS')
-                .pauseFor(3000)
-                .deleteAll()
-                .start();
+              typed.typeString('Diversity').pauseFor(3000).deleteAll().start();
+              typed.typeString('CRD DATA').pauseFor(5000).deleteAll().start();
             }}
-            options={{ loop: true }}
+            options={{ loop: true, cursor: '_' }}
           />
         </DinamicTitle>
       </div>

@@ -63,7 +63,7 @@ const Text = styled.p`
 const TalkToUs = ({ language }) => {
   return (
     <Container id="talkToUs">
-      <Title>{language === 'PT' ? 'Onde estamos' : 'Contact'}</Title>
+      <Title>{language === 'PT' ? 'Vamos tomar um café?' : 'Contact'}</Title>
       <Row>
         <FooterDiv>
           <div

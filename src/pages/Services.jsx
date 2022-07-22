@@ -6,6 +6,9 @@ import P from 'prop-types';
 import web from '../assets/images/web_dev_img.png';
 import data from '../assets/images/data_analysis_img.png';
 import app from '../assets/images/app_dev_img.png';
+import ia from '../assets/images/i.a_img.png';
+import rpa from '../assets/images/rpa_img.png';
+import metaverso from '../assets/images/metaverso_img.png';
 
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
@@ -92,6 +95,41 @@ const Services = ({ language }) => {
               : 'Making everything easier with the simplicity of a touch anywhere.'}
           </InsideText>
           <img src={app} />
+        </Columns>
+      </Row>
+      <Row>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'I.A.' : 'A.I.'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'Facilite sua rotina tendo decisões automatizadas baseadas em dados.'
+              : 'Make your life easier with automated decisions based on data.'}
+          </InsideText>
+          <img src={ia} />
+        </Columns>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'RPA' : 'RPA'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'Agilidade e eficiência com a automatização de processos.'
+              : 'Agility and efficiency with process automation.'}
+          </InsideText>
+          <img src={rpa} />
+        </Columns>
+        <Columns>
+          <InsideText title="true">
+            {language === 'PT' ? 'METAVERSO' : 'METAVERSE'}
+          </InsideText>
+          <InsideText>
+            {language === 'PT'
+              ? 'O próximo passo do mundo virtual, um novo ambiente contruido por todos. Seja parte.'
+              : 'The next step of the virtual world, a new enviroment built by everyone. Be part of it.'}
+          </InsideText>
+          <img src={metaverso} />
         </Columns>
       </Row>
     </Container>
