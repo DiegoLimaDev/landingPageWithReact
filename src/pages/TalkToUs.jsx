@@ -10,7 +10,7 @@ const data = {
     reef: {
       address: 'R. Dona Maria César, 170',
       building: 'Ed. Luciano Costa',
-      room: 'Sala 203A',
+      room: 'Sala 203A, CX PST 024',
       CEP: '50030-140',
       city: 'Recife-PE',
     },
@@ -93,7 +93,7 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title>Foz Inovação</Title>
+            <Title>FOZ Inovação</Title>
           </div>
           <Text>{data.places.foz.address}</Text>
           <Text>{data.places.foz.building}</Text>
