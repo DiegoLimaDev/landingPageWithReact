@@ -41,7 +41,7 @@ const Row = styled.div`
 
 const FooterDiv = styled.div`
   text-align: justify;
-  width: 15%;
+  width: 25%;
 
   @media ${theme.medias.media1} {
     width: auto;
@@ -90,10 +90,11 @@ const TalkToUs = ({ language }) => {
               direction: 'ltr',
               alignItems: 'center',
               textAlign: 'left',
+              width: '100%',
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title>FOZ Inovação</Title>
+            <Title>FOZ - Centro de Inovação</Title>
           </div>
           <Text>{data.places.foz.address}</Text>
           <Text>{data.places.foz.building}</Text>
