@@ -12,6 +12,18 @@ import Services from './pages/Services';
 import TalkToUs from './pages/TalkToUs';
 import Footer from './pages/Footer';
 
+const MenuVisible = () => css`
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+`;
+
+const MenuInvisible = () => css`
+  visibility: hidden;
+  opacity: 1;
+  height: 0;
+`;
+
 const Container = styled.div`
   width: 100%;
   height: 100%;
@@ -31,7 +43,7 @@ const NavBar = styled.div`
     z-index: 1;
 
     @media ${theme.medias.media1} {
-      /* position: block; */
+      /* position: sticky; */
       flex-direction: column;
       ${visible ? MenuVisible() : MenuInvisible()}
       margin: 0;
@@ -102,18 +114,6 @@ const Dropdown = styled.select`
 //     left: 50%;
 //   }
 // `;
-
-const MenuVisible = () => css`
-  visibility: visible;
-  opacity: 1;
-  height: auto;
-`;
-
-const MenuInvisible = () => css`
-  visibility: hidden;
-  opacity: 1;
-  height: 0;
-`;
 
 const Menu = styled.div`
   visibility: hidden;
@@ -188,18 +188,6 @@ const Home = () => {
         </Links>
         <Links>
           <ScrollTarget
-            to="partners"
-            spy={true}
-            smooth={true}
-            duration={500}
-            offset={visible ? -600 : -150}
-            onClick={() => setVisible(false)}
-          >
-            {language === 'PT' ? 'Parceiros' : 'Partners'}
-          </ScrollTarget>
-        </Links>
-        <Links>
-          <ScrollTarget
             to="services"
             spy={true}
             smooth={true}
@@ -208,6 +196,18 @@ const Home = () => {
             onClick={() => setVisible(false)}
           >
             {language === 'PT' ? 'Serviços' : 'Services'}
+          </ScrollTarget>
+        </Links>
+        <Links>
+          <ScrollTarget
+            to="partners"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={visible ? -600 : -150}
+            onClick={() => setVisible(false)}
+          >
+            {language === 'PT' ? 'Parceiros' : 'Partners'}
           </ScrollTarget>
         </Links>
         <Links>
@@ -227,8 +227,8 @@ const Home = () => {
         </Dropdown>
       </NavBar>
       <AboutUs language={language} />
-      <Partners language={language} />
       <Services language={language} />
+      <Partners language={language} />
       <TalkToUs language={language} />
       <Footer />
     </Container>

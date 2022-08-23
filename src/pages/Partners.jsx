@@ -5,92 +5,65 @@ import P from 'prop-types';
 
 import foz from '../assets/images/logo_foz.png';
 import reef from '../assets/images/logo_reef.png';
+import pd from '../assets/images/logo_pd.png';
+import consulticom from '../assets/images/logo_consulticom.png';
+import softex from '../assets/images/logo_softex.png';
 import g1ant from '../assets/images/logo_g1ant.png';
 
 const Container = styled.div`
   background-color: ${theme.colors.thirdColor};
-  margin-top: -50px;
+  margin-top: 50px;
   font-family: ${theme.font.secondary};
 `;
 
-// const Text = styled.p`
-//   color: ${theme.colors.primaryColor};
-//   font-size: ${theme.sizes.size2};
-//   text-align: center;
-// `;
+const Title = styled.p`
+  color: ${theme.colors.primaryColor};
+  font-size: ${theme.sizes.size3};
+  text-align: center;
+  margin-top: 50px;
+`;
 
 const Row = styled.div`
-  display: flex;
-  margin: 0 auto;
+  display: block;
+  margin: 100px auto 100px auto;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  max-width: 80%;
 
   @media ${theme.medias.media1} {
     flex-direction: column;
     justify-content: center;
+    margin: 5% auto;
   }
 `;
 
-const Img1 = styled.img`
-  width: 500px;
-  height: 500px;
+const Img = styled.img`
+  width: 300px;
+  height: 68px;
 
   @media ${theme.medias.media1} {
-    width: 250px;
-    height: 200px;
+    display: block;
+    margin: 50px auto;
   }
 `;
-
-const Img2 = styled.img`
-  margin: 50px 0;
-  width: 500px;
-  height: 350px;
-
-  @media ${theme.medias.media1} {
-    width: 200px;
-    height: 150px;
-  }
-`;
-
-const Img3 = styled.img`
-  margin: 50px auto;
-  width: 500px;
-  height: 150px;
-  display: block;
-
-  @media ${theme.medias.media1} {
-    width: 200px;
-    height: 50px;
-  }
-`;
-
 const Partners = ({ language }) => {
   return (
     <Container id="partners">
+      <Title>{language === 'PT' ? 'Parceiros' : 'Partners'}</Title>
       <div
         style={{
           alignItems: 'center',
         }}
       >
-        {/* <Text>{language === 'PT' ? 'Parceiros' : 'Partners'}</Text> */}
         <Row>
-          <Img1
-            src={reef}
-            // style={{ margin: '50px 0', width: '500px', height: '350px' }}
-          />
-          <Img2
-            src={foz}
-            // style={{
-            //   margin: '50px 0 100px 0',
-            //   width: '500px',
-            //   height: '150px',
-            // }}
-          />
+          <Img src={reef} />
+          <Img src={foz} />
+          <Img src={pd} />
+          <Img src={consulticom} />
+          <Img src={softex} />
+          <Img src={g1ant} />
         </Row>
-        <div>
-          <Img3 src={g1ant} />
-        </div>
       </div>
     </Container>
   );

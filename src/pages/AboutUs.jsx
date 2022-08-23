@@ -31,7 +31,7 @@ const Container = styled.div`
 //   font-weight: bold;
 // `;
 
-const DinamicTitle = styled.p`
+const DinamicTitle = styled.div`
   color: ${theme.colors.secondaryColor};
   font-size: ${theme.sizes.size2};
   font-weight: bold;
@@ -79,9 +79,10 @@ const SliderToPhones = styled.div`
   @media ${theme.medias.media1} {
     visibility: visible;
     height: auto;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 2rem;
     margin-top: -50%;
+    align-self: center;
   }
 `;
 
@@ -117,6 +118,7 @@ const AboutUs = ({ language }) => {
                 .deleteAll()
                 .start();
               typed.typeString('Diversity').pauseFor(3000).deleteAll().start();
+              typed.typeString('Integrity').pauseFor(3000).deleteAll().start();
               typed.typeString('CRD DATA').pauseFor(5000).deleteAll().start();
             }}
             options={{ loop: true, cursor: '_' }}
@@ -128,7 +130,7 @@ const AboutUs = ({ language }) => {
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
         <SimpleImageSlider
-          width={'50%'}
+          width={700}
           height={500}
           images={images}
           showBullets={true}
@@ -148,7 +150,7 @@ const AboutUs = ({ language }) => {
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
         <SimpleImageSlider
-          width={300}
+          width={'85%'}
           height={250}
           images={images}
           showBullets={true}
@@ -160,7 +162,6 @@ const AboutUs = ({ language }) => {
           navMargin={10}
           autoPlay={true}
           autoPlayDelay={5}
-          style={{ display: 'block', margin: '0 auto 50px auto' }}
         />
       </SliderToPhones>
     </Container>
