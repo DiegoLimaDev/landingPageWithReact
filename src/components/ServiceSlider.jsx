@@ -11,6 +11,7 @@ import ia from '../assets/images/ia_dev.png';
 import rpa from '../assets/images/rpa_dev.png';
 import metaverso from '../assets/images/metaverso_dev.png';
 import { useState } from 'react';
+import { theme } from '../theme/theme';
 
 const images = [web, data, mobile, ia, rpa, metaverso];
 
@@ -19,26 +20,61 @@ const Container = styled.div`
   display: block;
   margin: 3rem auto;
 
+  .web {
+    visibility: visible;
+
+    @media ${theme.medias.media2} {
+      visibility: hidden;
+      height: 0;
+    }
+  }
+
+  .mobile {
+    visibility: hidden;
+    height: 0;
+
+    @media ${theme.medias.media2} {
+      visibility: visible;
+      height: 100%;
+    }
+  }
+
   .slide img {
     margin: 0 auto;
+
+    @media ${theme.medias.media1} {
+      width: 300%;
+      height: 700%;
+    }
   }
 
   .slide {
     transform: scale(0.6);
     transition: transform 300ms;
     opacity: 0.5;
+
+    @media ${theme.medias.media1} {
+      transform: scale(0.2);
+      width: 100%;
+      opacity: 0;
+    }
   }
 
   .activeSlide {
     transform: scale(1.2);
     opacity: 1;
+
+    @media ${theme.medias.media1} {
+      transform: scale(1);
+    }
   }
 `;
 
 const ServiceSlider = () => {
   const [imgIndex, setImgIndex] = useState(0);
+  const [imgIndex2, setImgIndex2] = useState(0);
 
-  const settings = {
+  const settingsWeb = {
     infinite: true,
     lazyLoad: true,
     speed: 300,
@@ -47,25 +83,50 @@ const ServiceSlider = () => {
     centerPadding: 0,
     autoplay: true,
     autoplaySpeed: 5000,
-    // nextArrow: <NextArrow />,
-    // prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setImgIndex(next),
+  };
+
+  const settingsMobile = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    dots: true,
+    beforeChange: (current, next) => setImgIndex2(next),
   };
 
   return (
     <Container>
-      <Slider {...settings}>
-        {images.map((img, index) => {
-          return (
-            <div
-              key={index}
-              className={index === imgIndex ? 'slide activeSlide' : 'slide'}
-            >
-              <img src={img} alt={img} />
-            </div>
-          );
-        })}
-      </Slider>
+      <div className="web">
+        <Slider {...settingsWeb}>
+          {images.map((img, index) => {
+            return (
+              <div
+                key={index}
+                className={index === imgIndex ? 'slide activeSlide' : 'slide'}
+              >
+                <img src={img} alt={img} />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
+      <div className="mobile">
+        <Slider {...settingsMobile}>
+          {images.map((img, index) => {
+            return (
+              <div
+                key={index}
+                className={index === imgIndex2 ? 'slide activeSlide' : 'slide'}
+              >
+                <img src={img} alt={img} />
+              </div>
+            );
+          })}
+        </Slider>
+      </div>
     </Container>
   );
 };
