@@ -2,13 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { theme } from '../theme/theme';
 import P from 'prop-types';
-
-import web from '../assets/images/web_dev_img.png';
-import data from '../assets/images/data_analysis_img.png';
-import app from '../assets/images/app_dev_img.png';
-import ia from '../assets/images/i.a_img.png';
-import rpa from '../assets/images/rpa_img.png';
-import metaverso from '../assets/images/metaverso_img.png';
+import ServiceSlider from '../components/ServiceSlider';
 
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
@@ -60,7 +54,7 @@ const Services = ({ language }) => {
   return (
     <Container id="services">
       {/* <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text> */}
-      <Row>
+      {/* <Row>
         <Columns>
           <InsideText title="true">
             {language === 'PT' ? 'ANÁLISE DE DADOS' : 'DATA ANALYSIS'}
@@ -94,7 +88,7 @@ const Services = ({ language }) => {
               ? 'Tornando tudo mais fácil com a facilidade de um toque em qualquer lugar.'
               : 'Making everything easier with the simplicity of a touch anywhere.'}
           </InsideText>
-          <img src={app} />
+          <img src={mobile} />
         </Columns>
       </Row>
       <Row>
@@ -131,7 +125,8 @@ const Services = ({ language }) => {
           </InsideText>
           <img src={metaverso} />
         </Columns>
-      </Row>
+      </Row> */}
+      <ServiceSlider />
     </Container>
   );
 };

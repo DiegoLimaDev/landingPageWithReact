@@ -90,7 +90,7 @@ const TalkToUs = ({ language }) => {
               width="300"
               height="225"
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
+              referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             <Text>{data.places.reef.address}</Text>
             <Text>{data.places.reef.building}</Text>
