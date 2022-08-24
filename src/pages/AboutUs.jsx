@@ -130,8 +130,8 @@ const AboutUs = ({ language }) => {
           {language === 'PT' ? data.AboutUsText.pt : data.AboutUsText.en}
         </Text>
         <SimpleImageSlider
-          width={700}
-          height={500}
+          width={'50%'}
+          height={'60%'}
           images={images}
           showBullets={true}
           showNavs={true}
@@ -142,7 +142,7 @@ const AboutUs = ({ language }) => {
           navMargin={10}
           autoPlay={true}
           autoPlayDelay={5}
-          style={{ marginBottom: '100px' }}
+          style={{ marginBottom: '500px' }}
         />
       </Row>
       <SliderToPhones>
