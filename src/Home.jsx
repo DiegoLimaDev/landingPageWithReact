@@ -221,6 +221,16 @@ const Home = () => {
             {language === 'PT' ? 'Fale conosco' : 'Contact'}
           </ScrollTarget>
         </Links>
+        <Links>
+          <a
+            href="https://docs.google.com/forms/d/1NZT7PjeX8r9AiWSE6HsRQEakJDYRlxd6MjRVYam1Pok/viewform?ts=62ceddd0&edit_requested=true"
+            target="_blank"
+            rel="noreferrer"
+            style={{ textDecoration: 'none', color: theme.colors.thirdColor }}
+          >
+            {language === 'PT' ? 'Carreiras' : 'Careers'}
+          </a>
+        </Links>
         <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>
           <option value="PT">PT</option>
           <option value="EN">EN</option>
