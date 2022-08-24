@@ -23,6 +23,10 @@ const Img = styled.img`
 const Text = styled.p`
   font-size: ${theme.sizes.size5};
   color: ${theme.colors.thirdColor};
+
+  @media ${theme.medias.media1} {
+    text-align: center;
+  }
 `;
 
 const Footer = () => {
