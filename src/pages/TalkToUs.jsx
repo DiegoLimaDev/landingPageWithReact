@@ -41,18 +41,35 @@ const Row = styled.div`
   .secondRow {
     flex-direction: row;
     display: flex;
+
+    @media ${theme.medias.media1} {
+      flex-direction: column;
+    }
   }
 `;
 
 const FooterDiv = styled.div`
   text-align: justify;
-  width: 40%;
+  width: 30%;
   display: block;
   margin: 0 auto;
 
   @media ${theme.medias.media1} {
     width: auto;
     margin-left: 5%;
+    /* display: block;
+    margin: 0 auto; */
+  }
+
+  .firstRow {
+    display: flex;
+    direction: ltr;
+    align-items: center;
+    text-align: left;
+  }
+
+  .column {
+    flex-direction: column;
   }
 `;
 
@@ -60,11 +77,29 @@ const Title = styled.p`
   color: ${theme.colors.primaryColor};
   font-size: ${theme.sizes.size3};
   text-align: center;
+
+  @media ${theme.medias.media1} {
+    width: 100%;
+    text-align: center;
+  }
+`;
+
+const Title2 = styled.p`
+  color: ${theme.colors.primaryColor};
+  font-size: ${theme.sizes.size3};
+  text-align: center;
+
+  @media ${theme.medias.media1} {
+    width: 100%;
+    text-align: left;
+    margin-left: 1rem;
+  }
 `;
 
 const Text = styled.p`
   font-size: ${theme.sizes.size5};
   color: ${theme.colors.primaryColor};
+  margin-left: 1rem;
 `;
 
 const TalkToUs = ({ language }) => {
@@ -74,6 +109,7 @@ const TalkToUs = ({ language }) => {
       <Row>
         <FooterDiv>
           <div
+            className="firstRow"
             style={{
               display: 'flex',
               direction: 'ltr',
@@ -82,7 +118,7 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title>Reef Coworking</Title>
+            <Title2>Reef Coworking (MATRIZ)</Title2>
           </div>
           <div className="secondRow">
             <iframe
@@ -91,16 +127,19 @@ const TalkToUs = ({ language }) => {
               height="225"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
-            <Text>{data.places.reef.address}</Text>
-            <Text>{data.places.reef.building}</Text>
-            <Text>{data.places.reef.room}</Text>
-            <Text>{data.places.reef.city}</Text>
-            <Text>{data.places.reef.CEP}</Text>
+            />
+            <div className="column">
+              <Text>{data.places.reef.address}</Text>
+              <Text>{data.places.reef.building}</Text>
+              <Text>{data.places.reef.room}</Text>
+              <Text>{data.places.reef.city}</Text>
+              <Text>{data.places.reef.CEP}</Text>
+            </div>
           </div>
         </FooterDiv>
         <FooterDiv>
           <div
+            className="firstRow"
             style={{
               display: 'flex',
               direction: 'ltr',
@@ -110,7 +149,7 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title>FOZ - Centro de Inovação</Title>
+            <Title2>FOZ - Centro de Inovação</Title2>
           </div>
           <div className="secondRow">
             <iframe
@@ -120,15 +159,22 @@ const TalkToUs = ({ language }) => {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
-
-            <Text>{data.places.foz.address}</Text>
-            <Text>{data.places.foz.building}</Text>
-            <Text>{data.places.foz.city}</Text>
-            <Text>{data.places.foz.CEP}</Text>
+            <div className="column">
+              <Text>{data.places.foz.address}</Text>
+              <Text>{data.places.foz.building}</Text>
+              <Text>{data.places.foz.city}</Text>
+              <Text>{data.places.foz.CEP}</Text>
+            </div>
           </div>
         </FooterDiv>
       </Row>
-      <Text style={{ textAlign: 'center' }}>contato@crddata.com.br</Text>
+      <Text
+        style={{
+          textAlign: 'center',
+        }}
+      >
+        contato@crddata.com.br
+      </Text>
     </Container>
   );
 };
