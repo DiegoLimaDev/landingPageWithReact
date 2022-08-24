@@ -16,39 +16,39 @@ const Container = styled.div`
 //   text-align: center;
 // `;
 
-const Columns = styled.div`
-  background-color: ${theme.colors.fourthColor};
-  border-radius: 5px;
-  padding: 50px;
-  width: 20%;
-  text-align: center;
+// const Columns = styled.div`
+//   background-color: ${theme.colors.fourthColor};
+//   border-radius: 5px;
+//   padding: 50px;
+//   width: 20%;
+//   text-align: center;
 
-  @media ${theme.medias.media2} {
-    align-self: center;
-    width: auto;
-    margin: 100px auto;
-  }
-`;
+//   @media ${theme.medias.media2} {
+//     align-self: center;
+//     width: auto;
+//     margin: 100px auto;
+//   }
+// `;
 
-const InsideText = styled.p`
-  ${({ title }) => css`
-    color: ${theme.colors.thirdColor};
-    font-size: ${title === 'true' ? theme.sizes.size3 : theme.sizes.size4};
-    text-align: center;
-  `}
-`;
+// const InsideText = styled.p`
+//   ${({ title }) => css`
+//     color: ${theme.colors.thirdColor};
+//     font-size: ${title === 'true' ? theme.sizes.size3 : theme.sizes.size4};
+//     text-align: center;
+//   `}
+// `;
 
-const Row = styled.div`
-  direction: ltr;
-  flex-direction: row;
-  display: flex;
-  justify-content: space-evenly;
-  margin: 100px auto;
+// const Row = styled.div`
+//   direction: ltr;
+//   flex-direction: row;
+//   display: flex;
+//   justify-content: space-evenly;
+//   margin: 100px auto;
 
-  @media ${theme.medias.media2} {
-    flex-direction: column;
-  }
-`;
+//   @media ${theme.medias.media2} {
+//     flex-direction: column;
+//   }
+// `;
 
 const Services = ({ language }) => {
   return (

@@ -3,8 +3,6 @@ import Slider from 'react-slick';
 import styled from 'styled-components';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { NextArrow } from './Arrows';
-import { PrevArrow } from './Arrows';
 
 import web from '../assets/images/web_dev.png';
 import data from '../assets/images/data_dev.png';
@@ -13,7 +11,6 @@ import ia from '../assets/images/ia_dev.png';
 import rpa from '../assets/images/rpa_dev.png';
 import metaverso from '../assets/images/metaverso_dev.png';
 import { useState } from 'react';
-import { theme } from '../theme/theme';
 
 const images = [web, data, mobile, ia, rpa, metaverso];
 
