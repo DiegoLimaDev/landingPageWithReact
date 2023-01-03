@@ -9,7 +9,8 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Home />} />
+        <Route path="/" element={<Home />} redirectTo="/home" />
+        <Route path="/home" element={<Home />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
