@@ -219,7 +219,6 @@ const Home = () => {
         </Links>
         <Links>
           <a
-            href="https://docs.google.com/forms/d/1NZT7PjeX8r9AiWSE6HsRQEakJDYRlxd6MjRVYam1Pok/viewform?ts=62ceddd0&edit_requested=true"
             target="_blank"
             rel="noreferrer"
             style={{ textDecoration: 'none', color: theme.colors.thirdColor }}
