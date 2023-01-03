@@ -4,9 +4,9 @@ import { theme } from '../theme/theme';
 import P from 'prop-types';
 import SimpleImageSlider from 'react-simple-image-slider';
 
-import img1 from '../assets/images/img_1.png';
-import img2 from '../assets/images/img_2.png';
-import img3 from '../assets/images/img_3.png';
+import img1 from '../assets/images/img_1.svg';
+import img2 from '../assets/images/img_2.svg';
+import img3 from '../assets/images/img_3.svg';
 // import logo from '../assets/images/only_logo.png';
 import TypewriterComponent from 'typewriter-effect';
 
@@ -119,7 +119,11 @@ const AboutUs = ({ language }) => {
                 .start();
               typed.typeString('Diversity').pauseFor(3000).deleteAll().start();
               typed.typeString('Integrity').pauseFor(3000).deleteAll().start();
-              typed.typeString('CRD DATA').pauseFor(5000).deleteAll().start();
+              typed
+                .typeString('Communication')
+                .pauseFor(5000)
+                .deleteAll()
+                .start();
             }}
             options={{ loop: true, cursor: '_' }}
           />

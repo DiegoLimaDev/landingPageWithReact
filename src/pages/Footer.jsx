@@ -3,12 +3,7 @@ import styled from 'styled-components';
 import { theme } from '../theme/theme';
 
 import logo from '../assets/images/only_logo.png';
-import {
-  ScLinkedin,
-  ScInstagram,
-  ScFacebook,
-  ScYoutube,
-} from '@styled-icons/evil';
+import { ScLinkedin, ScInstagram, ScGithub } from '@styled-icons/evil';
 
 const Container = styled.div`
   background-color: ${theme.colors.primaryColor};
@@ -42,35 +37,30 @@ const Footer = () => {
         }}
       >
         <Img src={logo} />
-        <Text>Copyright © 2022 CRD DATA LTDA - CNPJ: 46.639.045/0001-01</Text>
+        <Text>
+          Copyright © 2023 LANDING PAGES LTDA - CNPJ: 00.000.000/0001-01
+        </Text>
         <div>
           <a
-            href="https://www.linkedin.com/company/crddata/"
+            href="https://www.linkedin.com/in/diegolimadev/"
             target="_blank"
             rel="noreferrer"
           >
             <ScLinkedin size="50" color={theme.colors.thirdColor} />
           </a>
           <a
-            href="https://www.instagram.com/crddata/"
+            href="https://www.instagram.com/diego.nobody/"
             target="_blank"
             rel="noreferrer"
           >
             <ScInstagram size="50" color={theme.colors.thirdColor} />
           </a>
           <a
-            href="https://www.facebook.com/crddata"
+            href="https://github.com/DiegoLimaDev/"
             target="_blank"
             rel="noreferrer"
           >
-            <ScFacebook size="45" color={theme.colors.thirdColor} />
-          </a>
-          <a
-            href="https://www.youtube.com/channel/UCavcxqnoEpKXc1JHOs-ys_w/featured"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <ScYoutube size="50" color={theme.colors.thirdColor} />
+            <ScGithub size="45" color={theme.colors.thirdColor} />
           </a>
         </div>
       </div>

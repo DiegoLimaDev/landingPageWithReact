@@ -8,17 +8,11 @@ import { Location } from '@styled-icons/evil';
 const data = {
   places: {
     reef: {
-      address: 'R. Dona Maria César, 170',
-      building: 'Ed. Luciano Costa',
-      room: 'Sala 203A, CX PST 024',
-      CEP: '50030-140',
+      address: 'Praça Rio Branco',
+      building: 'Ed. Brennand',
+      room: 'Centro',
+      CEP: '50030-230',
       city: 'Recife-PE',
-    },
-    foz: {
-      address: 'Av. Mal. Mascarenhas de Morais, 4861',
-      building: 'Dentro da FPS',
-      CEP: '51150-000',
-      city: 'Imbiribeira-PE',
     },
   },
 };
@@ -118,11 +112,11 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title2>Reef Coworking (MATRIZ)</Title2>
+            <Title2>Marco Zero</Title2>
           </div>
           <div className="secondRow">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.5947103566825!2d-34.871439236926115!3d-8.062784562749876!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1986087af83f%3A0x65e18d049a2f84f5!2sCRD%20DATA!5e0!3m2!1spt-BR!2sbr!4v1660753508165!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3890888524083!2d-34.87068730000001!3d-8.0617353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a48f26183d%3A0x6a9ebfb27ba8f98d!2sPra%C3%A7a%20Rio%20Branco%20-%20Recife%2C%20PE%2C%2050030-230!5e0!3m2!1spt-BR!2sbr!4v1672760705377!5m2!1spt-BR!2sbr"
               width="300"
               height="225"
               loading="lazy"
@@ -149,21 +143,22 @@ const TalkToUs = ({ language }) => {
             }}
           >
             <Location size="40" color={theme.colors.primaryColor} />
-            <Title2>FOZ - Centro de Inovação</Title2>
+            <Title2>Marco Zero</Title2>
           </div>
           <div className="secondRow">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d987.4363588564912!2d-34.915038102706596!3d-8.127379565795941!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab1fc1cf81e0ad%3A0xf9a206352536f030!2sFOZ%20Centro%20de%20Inova%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1660753695536!5m2!1spt-BR!2sbr"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3950.3890888524083!2d-34.87068730000001!3d-8.0617353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab18a48f26183d%3A0x6a9ebfb27ba8f98d!2sPra%C3%A7a%20Rio%20Branco%20-%20Recife%2C%20PE%2C%2050030-230!5e0!3m2!1spt-BR!2sbr!4v1672760705377!5m2!1spt-BR!2sbr"
               width="300"
               height="225"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             />
             <div className="column">
-              <Text>{data.places.foz.address}</Text>
-              <Text>{data.places.foz.building}</Text>
-              <Text>{data.places.foz.city}</Text>
-              <Text>{data.places.foz.CEP}</Text>
+              <Text>{data.places.reef.address}</Text>
+              <Text>{data.places.reef.building}</Text>
+              <Text>{data.places.reef.room}</Text>
+              <Text>{data.places.reef.city}</Text>
+              <Text>{data.places.reef.CEP}</Text>
             </div>
           </div>
         </FooterDiv>
@@ -173,7 +168,7 @@ const TalkToUs = ({ language }) => {
           textAlign: 'center',
         }}
       >
-        contato@crddata.com.br
+        contato@contato.com.br
       </Text>
     </Container>
   );

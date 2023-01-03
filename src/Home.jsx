@@ -5,7 +5,7 @@ import { Link as ScrollTarget } from 'react-scroll';
 
 import { Navicon } from '@styled-icons/evil';
 import { Close } from '@styled-icons/evil';
-import logo from './assets/images/logo_crd_data.png';
+import logo from './assets/images/only_logo.png';
 import AboutUs from './pages/AboutUs';
 import Partners from './pages/Partners';
 import Services from './pages/Services';
@@ -147,14 +147,10 @@ const Home = () => {
           <img src={logo} style={{ display: 'block', margin: '0 auto' }} />
         </Menu>
       )}
-      {/* <SwitchLanguage>
-        <Dropdown onChange={() => setLanguage(language === 'PT' ? 'EN' : 'PT')}>
-          <option value="PT">PT</option>
-          <option value="EN">EN</option>
-        </Dropdown>
-      </SwitchLanguage> */}
       <NavBar visible={visible}>
-        {visible ? null : <img src={logo} style={{ marginLeft: '2rem' }} />}
+        {visible ? null : (
+          <img src={logo} height="80" style={{ marginLeft: '2rem' }} />
+        )}
         <>
           {visible ? (
             <div
