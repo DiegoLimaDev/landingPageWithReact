@@ -1,7 +1,7 @@
 {
   "name": "crd_data_site",
   "version": "0.1.0",
-  "homepage": "https://diegolimadev.github.io/landingPageWithReact/",
+  "homepage": "https://diegolimadev.github.io/landingPageWithReact/base",
   "private": true,
   "dependencies": {
     "@styled-icons/evil": "^10.34.0",
