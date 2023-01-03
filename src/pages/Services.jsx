@@ -1,5 +1,5 @@
 import React from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { theme } from '../theme/theme';
 import P from 'prop-types';
 import ServiceSlider from '../components/ServiceSlider';
@@ -50,7 +50,7 @@ const Container = styled.div`
 //   }
 // `;
 
-const Services = ({ language }) => {
+const Services = () => {
   return (
     <Container id="services">
       {/* <Text>{language === 'PT' ? 'Serviços' : 'Services'}</Text> */}
