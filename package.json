@@ -1,8 +1,8 @@
 {
   "name": "crd_data_site",
   "version": "0.1.0",
-  "homepage": "https://diegolimadev.github.io/landingPageWithReact/base",
-  "private": true,
+  "homepage": "https://diegolimadev.github.io/landingPageWithReact/",
+  "private": false,
   "dependencies": {
     "@styled-icons/evil": "^10.34.0",
     "@testing-library/jest-dom": "^5.16.4",
